@@ -1506,3 +1506,24 @@ body {
 .link-underline:hover {
       background-size: 100% 1px, 0 1px;
 }
+
+.music-align {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0;
+    margin: 0 auto;
+    align-items: left;
+    text-align: left;
+    justify-content: normal
+}
+
+.music-align-cover {
+    margin-bottom: var(1.5rem);
+    align-self: normal;
+}
+
+.music-align-text {
+    display: block;
+    margin-left: 15px;
+    position: relative
+}
