@@ -1,42 +1,43 @@
 <?php
 
-$user     = ''; 
-$key      = ''; 
-$status   = 'Last Played:'; 
-$endpoint = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' . $user . '&&limit=2&api_key=' . $key . '&format=json';
+$user     = ""; 
+$key      = ""; 
+$status   = "Last Played:"; 
+$endpoint = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" . $user . "&&limit=2&api_key=" . $key . "&format=json";
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $endpoint);
-curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0); 
 curl_setopt($ch, CURLOPT_TIMEOUT, 10); 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept: application/json"));
 
 $response = curl_exec($ch);
 $lastfm[] = json_decode($response, true);
 
 curl_close($ch);
 
-$artwork = $lastfm[0]['recenttracks']['track'][0]['image'][2]['#text'];
+$artwork = $lastfm[0]["recenttracks"]["track"][0]["image"][2]["#text"];
 
 if ( empty( $artwork ) ) {
-    $artwork = '/assets/art.png';
+    $artwork = "/assets/art.png";
 }
 
 $trackInfo = [
-    'name'       => $lastfm[0]['recenttracks']['track'][0]['name'],
-    'artist'     => $lastfm[0]['recenttracks']['track'][0]['artist']['#text'],
-    'link'       => $lastfm[0]['recenttracks']['track'][0]['url'],
-    'albumArt'   => $artwork,
-    'status'     => $status
+    "name"       => $lastfm[0]["recenttracks"]["track"][0]["name"],
+    "album"      => $lastfm[0]["recenttracks"]["track"][0]["album"]["#text"],
+    "artist"     => $lastfm[0]["recenttracks"]["track"][0]["artist"]["#text"],
+    "link"       => $lastfm[0]["recenttracks"]["track"][0]["url"],
+    "albumArt"   => $artwork,
+    "status"     => $status
 ];
 
-if ( !empty($lastfm[0]['recenttracks']['track'][0]['@attr']['nowplaying']) ) {
-    $trackInfo['nowPlaying'] = $lastfm[0]['recenttracks']['track'][0]['@attr']['nowplaying'];
-    $trackInfo['status'] = 'Now Playing:';
+if ( !empty($lastfm[0]["recenttracks"]["track"][0]["@attr"]["nowplaying"]) ) {
+    $trackInfo["nowPlaying"] = $lastfm[0]["recenttracks"]["track"][0]["@attr"]["nowplaying"];
+    $trackInfo["status"] = "Now Playing:";
 }
 
 ?>
@@ -82,11 +83,11 @@ if ( !empty($lastfm[0]['recenttracks']['track'][0]['@attr']['nowplaying']) ) {
             </header>
             <main class="px-3">
                 <figure class="music-align">
-                    <img class="music-align-cover" width="200" height="200" src="<?php echo $trackInfo['albumArt']; ?>">
+                    <img class="music-align-cover" width="200" height="200" src="<?php echo $trackInfo["albumArt"]; ?>">
                     <figcaption>
-                        <h4 class="music-align-text"><?php echo $trackInfo['status']; ?></h4><br>
-                        <h2 class="music-align-text"><?php echo $trackInfo['name']; ?></p>
-                        <h5 class="music-align-text"><?php echo $trackInfo['artist']; ?></h5>
+                        <h4 class="show-anim music-align-text"><?php echo $trackInfo["status"]; ?></h4><br>
+                        <h2 class="show-anim music-align-text"><?php echo $trackInfo["name"]; ?></p>
+                        <h5 class="show-anim music-align-text"><?php echo $trackInfo["album"]; ?> • <?php echo $trackInfo["artist"]; ?></h5>
                     </figcaption>
             </main>
             <footer class="mt-auto text-white-50">
@@ -94,7 +95,7 @@ if ( !empty($lastfm[0]['recenttracks']['track'][0]['@attr']['nowplaying']) ) {
             </footer>
             <video autoplay muted playsinline loop id="video">
                 <source src="/assets/video.mp4" type="video/mp4">
-                It looks like your browser isn't letting me play a cool car video in the background :/
+                It looks like your browser isn"t letting me play a cool car video in the background :/
                 You can watch it on YouTube though, through the link at the bottom of the page :)
             </video>
         </div>
