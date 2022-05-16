@@ -1527,3 +1527,14 @@ body {
     margin-left: 15px;
     position: relative
 }
+
+.music-cover-hover img {
+	-webkit-filter: grayscale(0) brightness(100%);
+	filter: grayscale(0) brightness(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.music-cover-hover img:hover {
+	-webkit-filter: grayscale(100%) brightness(25%);
+	filter: grayscale(100%) brightness(25%);
+}

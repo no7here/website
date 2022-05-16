@@ -83,12 +83,15 @@ if ( !empty($lastfm[0]["recenttracks"]["track"][0]["@attr"]["nowplaying"]) ) {
             </header>
             <main class="px-3">
                 <figure class="music-align">
-                    <img class="music-align-cover" width="200" height="200" src="<?php echo $trackInfo["albumArt"]; ?>">
+                    <div class="music-cover-hover">
+                        <a class="music-link-profile" href="https://open.spotify.com/user/zp8o4bf6stiyic8w713dtxqe2?si=6726264e5a574002" target="_blank"><img class="music-align-cover" alt="Check out my Spotify profile!" width="200" height="200" src="<?php echo $trackInfo["albumArt"]; ?>"></a>
+                    </div>
                     <figcaption>
                         <h4 class="show-anim music-align-text"><?php echo $trackInfo["status"]; ?></h4><br>
                         <h2 class="show-anim music-align-text"><?php echo $trackInfo["name"]; ?></p>
                         <h5 class="show-anim music-align-text"><?php echo $trackInfo["album"]; ?> • <?php echo $trackInfo["artist"]; ?></h5>
                     </figcaption>
+                </figure>
             </main>
             <footer class="mt-auto text-white-50">
                 <p style="text-align:center;">not here | Copyright &copy; 2022 all rights reserved | watch the video <a style="text-decoration: none;" class="text-white-50 link-underline" href="https://www.youtube.com/watch?v=TUvcVBUv0rg" target="_blank">here</a></p>
