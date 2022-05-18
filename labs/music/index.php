@@ -3,10 +3,10 @@
 $user     = ""; 
 $key      = ""; 
 $status   = "Last Played:"; 
-$endpoint = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" . $user . "&&limit=2&api_key=" . $key . "&format=json";
+$recent   = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" . $user . "&&limit=2&api_key=" . $key . "&format=json";
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $endpoint);
+curl_setopt($ch, CURLOPT_URL, $recent);
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -30,7 +30,6 @@ $trackInfo = [
     "name"       => $lastfm[0]["recenttracks"]["track"][0]["name"],
     "album"      => $lastfm[0]["recenttracks"]["track"][0]["album"]["#text"],
     "artist"     => $lastfm[0]["recenttracks"]["track"][0]["artist"]["#text"],
-    "link"       => $lastfm[0]["recenttracks"]["track"][0]["url"],
     "albumArt"   => $artwork,
     "status"     => $status
 ];
@@ -84,11 +83,14 @@ if ( !empty($lastfm[0]["recenttracks"]["track"][0]["@attr"]["nowplaying"]) ) {
             <main class="px-3">
                 <figure class="music-align">
                     <div class="music-cover-hover">
-                        <a class="music-link-profile" href="https://open.spotify.com/user/zp8o4bf6stiyic8w713dtxqe2?si=6726264e5a574002" target="_blank"><img class="music-align-cover" alt="Check out my Spotify profile!" width="200" height="200" src="<?php echo $trackInfo["albumArt"]; ?>"></a>
+                        <a class="music-link-profile" href="https://open.spotify.com/user/zp8o4bf6stiyic8w713dtxqe2?si=6726264e5a574002" target="_blank">
+                            <img class="music-align-cover" alt="Check out my Spotify profile!" width="200" height="200" src="<?php echo $trackInfo["albumArt"]; ?>">
+                            <div><p style="color: white; text-decoration: none;" class="link-underline">My Spotify Profile!</p></div>
+                        </a>
                     </div>
                     <figcaption>
                         <h4 class="show-anim music-align-text"><?php echo $trackInfo["status"]; ?></h4><br>
-                        <h2 class="show-anim music-align-text"><?php echo $trackInfo["name"]; ?></p>
+                        <h2 class="show-anim music-align-text"><?php echo $trackInfo["name"]; ?></h2>
                         <h5 class="show-anim music-align-text"><?php echo $trackInfo["album"]; ?> • <?php echo $trackInfo["artist"]; ?></h5>
                     </figcaption>
                 </figure>
