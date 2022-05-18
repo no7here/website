@@ -1528,13 +1528,38 @@ body {
     position: relative
 }
 
-.music-cover-hover img {
-	-webkit-filter: grayscale(0) brightness(100%);
-	filter: grayscale(0) brightness(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+.music-cover-hover {
+    display: block;
+    position: relative;
 }
-.music-cover-hover img:hover {
-	-webkit-filter: grayscale(100%) brightness(25%);
-	filter: grayscale(100%) brightness(25%);
+
+.music-cover-hover div {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+}
+
+.music-cover-hover img {
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.music-cover-hover:hover div {
+    opacity: 0.5;
+}
+
+.music-cover-hover:hover img {
+    filter: alpha(opacity=50);
+    -webkit-opacity: 0.5;
+    opacity: 0.5;
 }
