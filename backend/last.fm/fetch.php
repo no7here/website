@@ -23,18 +23,12 @@ try {
 
     curl_close($ch);
 
-    $art = $lastfm[0]["recenttracks"]["track"][0]["image"][2]["#text"];
-
-    if (empty($art)) {
-        $art = "/assets/default/art.png";
-    }
-
     $trackInfo = [
         "name"       => $lastfm[0]["recenttracks"]["track"][0]["name"],
         "album"      => $lastfm[0]["recenttracks"]["track"][0]["album"]["#text"],
         "artist"     => $lastfm[0]["recenttracks"]["track"][0]["artist"]["#text"],
         "status"     => $status,
-        "artwork"    => $art
+        "artwork"    => $lastfm[0]["recenttracks"]["track"][0]["image"][2]["#text"];
     ];
 
     if (!empty($lastfm[0]["recenttracks"]["track"][0]["@attr"]["nowplaying"])) {
@@ -52,6 +46,10 @@ try {
 
     }
 
-} catch (Error) {}
+} catch (Error) {
+
+    echo "<div class=\"box-error music-box\"><h1>An error occurred.</h1><p>An error occurred when fetching tracks from the last.fm API to display here.</p></div>";
+    
+}
 
 function errors($errno, $errstr) {} ?>
