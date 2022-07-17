@@ -69,13 +69,13 @@ if ((strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) or (strpos($_SERVER['HTTP_USER
             </footer>
             <?php if (date("d") == 1 and date("m") == 1) {
                 
-                echo "<div class=\"firework\"><div class=\"pyro\"><div class=\"before\"></div><div class=\"after\"></div></div></div> <video preload=\"none\" id=\"back-ground\" autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video>"; 
+                echo "<div class=\"firework\"><div class=\"pyro\"><div class=\"before\"></div><div class=\"after\"></div></div></div> <video preload=\"none\" id=\"back-ground\" disablePictureInPicture autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video>"; 
             
             }else if (date("d") == 14 and date("m") == 2) {
 
                 # if it is Valentines Day, show falling hearts
 
-                echo "<video preload=\"none\" id=\"back-ground\" autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div>";
+                echo "<video preload=\"none\" id=\"back-ground\" disablePictureInPicture autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div><div class=\"snowflake\">❤️</div>";
 
             } else if (date("d") == 1 and date("m") == 4) {
 
@@ -105,7 +105,7 @@ if ((strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) or (strpos($_SERVER['HTTP_USER
 
                 # if it is my birthday, show confetti
 
-                echo "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script><script src=\"/assets/javascript/confetti.js\" type=\"text/javascript\"></script><video preload=\"none\" id=\"back-ground\" autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video>";
+                echo "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></script><script src=\"/assets/javascript/confetti.js\" type=\"text/javascript\"></script><video preload=\"none\" id=\"back-ground\" disablePictureInPicture autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video>";
 
             } else if (date("d") == 31 and date("m") == 10) {
 
@@ -123,13 +123,13 @@ if ((strpos($_SERVER["HTTP_USER_AGENT"], "MSIE")) or (strpos($_SERVER['HTTP_USER
 
                 # if it is Christmas, show snow
 
-                echo "<script src=\"/assets/javascript/snow.js\" type=\"text/javascript\"></script><video preload=\"none\" id=\"back-ground\" autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video>";
+                echo "<script src=\"/assets/javascript/snow.js\" type=\"text/javascript\"></script><video preload=\"none\" id=\"back-ground\" disablePictureInPicture autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video>";
 
             } else {
 
                 # else just show normal car vid in background
                 
-                echo "<video preload=\"none\" id=\"back-ground\" autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video>"; 
+                echo "<video preload=\"none\" id=\"back-ground\" disablePictureInPicture autoplay muted playsinline loop><source src=\"/assets/video.mp4\" type=\"video/mp4\"></video>"; 
                 
             } ?>
         </div>
