@@ -4,4 +4,4 @@
 
 My personal website showing off my projects. Built using PHP, HTML, JS & CSS.
 
-Visit (old version of) the website [here](https://not-here.dev)!
+Visit (the old version of) the website [here](https://not-here.dev)!
