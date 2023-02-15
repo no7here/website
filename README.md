@@ -1,7 +1,7 @@
 # Website
-### ⚠️ Source code provided on GitHub is currently out of date.
+### This version is still being worked on and is not currently live. 
 ---
 
 My personal website showing off my projects. Built using PHP, HTML, JS & CSS.
 
-visit it [here](https://not-here.dev)!
+Visit (old version of) the website [here](https://not-here.dev)!
