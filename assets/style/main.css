@@ -15,13 +15,14 @@ a:link, a:visited, a:hover, a:active {
 }
 
 nav {
-    position: absolute; 
+    position: fixed; 
     z-index: 1;
     top: 0; 
     width: 100%;
     left: 0;  
     padding: 1.25rem 0;
     font-size: 20px; 
+    background: #111;
 }
 
 .nav-container {
@@ -41,6 +42,57 @@ nav {
 
 .home:hover, .nav-link:hover { 
     color: #ff5252;
+}
+
+.head-container {
+    margin: 0 0 2rem 0; 
+}
+
+.header {
+    padding: 12rem 0 3rem 0;
+    border-bottom: 1px solid #fff; 
+}
+
+.header-container {
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 36px; 
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.header-title {
+    grid-column: span 9 / span 9; 
+}
+
+.header-title h1 {
+    font-size: 3.75rem; 
+    line-height: 0.8;
+    letter-spacing: -.0.03rem; 
+    font-weight: 300;
+    transition: .25s;
+}
+
+.header-title h1:hover {
+    color: #ff5252;
+}
+
+.button { 
+    background-color: #000; 
+    padding: .75rem 1.75rem;
+    margin-right: 15px;
+    border-radius: 0.25rem;
+    border: 1px solid #000;
+    transition: .25s; 
+}
+
+.button:hover {
+    border: 1px solid #00cdcd;
+}
+
+.content-container {
+    width: 80%; 
+    margin: 0 auto;
 }
 
 @media (min-width: 701px) {
