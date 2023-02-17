@@ -1,0 +1,117 @@
+.container {
+    width: 80%; 
+    display: flex; 
+    margin: 0 auto;
+    min-height: 85dvh; 
+    align-items: flex-end;
+    box-sizing: border-box;
+    border-width: 0; 
+    border-style: solid; 
+    border-color: currentColor; 
+}
+
+.button-container {
+    width: 80%; 
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    box-sizing: border-box;
+    border-width: 0; 
+    border-style: solid; 
+    border-color: currentColor; 
+}
+
+.title span:hover {
+    color: #ff5252;
+}
+
+.content-spacer {
+    height: 20vh;
+}
+
+.about-container {
+    width: 80%; 
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor; 
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    flex-shrink: 1;
+    width: 49%;
+}
+
+.text-container h1 {
+    font-size: 32px;
+    font-weight: 300; 
+    transition: .25s;
+}
+
+.text-container h1:after {
+    content: "";
+    display: block;
+    width: 50px;
+    padding-top: 10px;
+    border-bottom: 1px solid #00cdcd;
+}
+
+.text-container p {
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 300; 
+}
+
+@media (min-width: 1001px) {
+    .title {
+        font-size: 20px;
+        line-height: 1.75rem; 
+        margin-bottom: 1.5rem;
+        max-width: 660;
+        letter-spacing: 0.1rem;
+        font-weight: 300;
+    }
+    
+    .title span {
+        display: block; 
+        font-size: 72px;
+        padding: 1.35vw 0; 
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        transition: .25s; 
+    }  
+} @media (max-width: 1000px) {
+    .title {
+        font-size: 16px; 
+        line-height: 2rem; 
+        margin-bottom: 1.5rem;
+        max-width: 660px;
+        letter-spacing: 0.1rem;
+        font-weight: 300;
+    }
+
+    .title span {
+        display: block; 
+        font-size: 64px;
+        padding: 1.35vw 0; 
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        transition: .25s; 
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+}
