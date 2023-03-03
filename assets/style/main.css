@@ -31,6 +31,10 @@ nav {
     margin: 0 auto;
 }
 
+.home {
+    z-index: 2;
+}
+
 .home, .nav-link {
     transition: .25s; 
 }
@@ -261,7 +265,6 @@ nav {
         left: 0; 
         width: 100%;
         height: 70px;
-        z-index: 1; 
         transition: .5s; 
         transition-delay: .5s; 
         overflow: hidden;
