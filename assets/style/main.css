@@ -31,10 +31,6 @@ nav {
     margin: 0 auto;
 }
 
-.home {
-    z-index: 2;
-}
-
 .home, .nav-link {
     transition: .25s; 
 }
@@ -273,11 +269,9 @@ nav {
 
     .nav-btn ~ .nav-overlay > ul {
         list-style: none;
-        text-align: center;
-        position: absolute; 
-        left: 15%;
-        right: 25%;
-        top: 30%;
+        text-align: left;
+        position: absolute;
+        top: 20%;
     }
 
     .nav-btn ~ .nav-overlay > ul > li {
@@ -288,8 +282,16 @@ nav {
 
     .nav-btn ~ .nav-overlay > ul > li > a {
         text-decoration: none;
-        display: block; 
+        display: flex;
+        align-items: center; 
+        font-size: 30px;
         padding: 30px;  
+    }
+
+    .nav-btn ~ .nav-overlay > ul > li > a > img {
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
     }
 
     .nav-btn:checked ~ .nav-overlay {
