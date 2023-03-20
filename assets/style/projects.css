@@ -1,0 +1,126 @@
+.grid-options {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-options > span {
+    font-size: 1.2rem;
+}
+
+.filter, .width {
+    width: 150px;
+}
+
+.options {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    background: #333;
+    border-radius: 5px;
+    width: 125px;
+    padding: 0 10px;
+}
+
+.options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.options input {
+    margin-right: 10px;
+}
+
+.filter:hover .options {
+    display: flex;
+}
+
+.sort:hover .options {
+    display: flex;
+}
+
+.search {
+    width: 25%;
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-bottom: 1px solid #555;
+    transition: .25s;
+}
+
+.search input:hover {
+    border-bottom: 1px solid #888;
+}
+
+.search input:focus {
+    outline: none;
+    border-bottom: 1px solid #00cdcd;
+}
+
+.content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 75px auto 75px auto;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #222;
+    width: 318px;
+    height: 130px;
+    border-radius: 5px;
+    padding: 25px;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    background: #444;
+}
+
+.grid-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.grid-head img {
+    width: 25px;
+    height: 25px;
+}
+
+.grid-head span {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.grid-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto 0;
+}
+
+.grid-info span {
+    margin: 5px 0;
+}
