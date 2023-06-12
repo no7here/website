@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>not here</title>
+        <title>// no7here</title>
         <!--Search Tags-->
-        <meta name="title" content="not here">
-        <meta name="keywords" content="not here, developer, musician, producer, uk">
-        <meta name="description" content="I'm not here, a developer, musician and producer from the UK.">
+        <meta name="title" content="no7here">
+        <meta name="keywords" content="no7here, no there, not here, developer, musician, producer, uk">
+        <meta name="description" content="I'm no7here, a developer, musician and producer from the UK.">
         <!--Embed Tags-->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="not here">
+        <meta property="og:title" content="no7here">
         <meta property="og:url" content="https://not-here.dev"> 
         <meta property="og:image" content="/assets/icon/embed.png">
-        <meta property="og:description" content="I'm not here, a developer, musician and producer from the UK.">
-        <meta property="og:site_name" content="not here">
+        <meta property="og:description" content="I'm no7here, a developer, musician and producer from the UK.">
+        <meta property="og:site_name" content="no7here">
         <!--Twitter Tags-->
         <meta property="twitter:card" content="summary">
-        <meta property="twitter:title" content="not here">
+        <meta property="twitter:title" content="no7here">
         <meta property="twitter:url" content="https://not-here.dev">
         <meta property="twitter:image" content="/assets/icon/embed.png">
-        <meta property="twitter:description" content="I'm not here, a developer, musician and producer from the UK.">
+        <meta property="twitter:description" content="I'm no7here, a developer, musician and producer from the UK.">
         <!--Other Tags-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#000000">
-        <meta name="author" content="not here">
+        <meta name="author" content="no7here">
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
         <!--Icons-->
@@ -37,11 +37,13 @@
         <link rel="preload" as="style" href="/assets/style/font.css" onload="this.rel='stylesheet'">
         <link rel="stylesheet" href="/assets/style/main.css">
         <link rel="stylesheet" href="/assets/style/home.css">
+        <script src="/assets/script/jquery.js"></script>
+        <script src="/assets/script/track.js"></script>
     </head>
     <body>
         <nav class="nav">
             <div class="nav-container">
-                <a class="home" href="/">not here</a>
+                <a class="home" href="/">no7here</a>
                 <div class="nav-grid">
                     <a class="nav-link" href="/music">music</a>
                     <a class="nav-link" href="/projects">projects</a>
@@ -63,7 +65,7 @@
             </div>
         </nav>
         <div class="container">
-            <h1 class="title">Hey, I am<span>not here</span>A developer, musician and producer from the UK.</h1>
+            <h1 class="title">Hey, I am<span>no7here</span>A developer, musician and producer from the UK.</h1>
         </div>
         <div class="button-container">
             <a class="button" href="/projects">projects</a>
@@ -83,23 +85,23 @@
         <div class="social-container">
             <h1>Socials</h1>
             <div class="social-grid">
-                <a class="social-link" href="">
+                <a class="social-link" href="https://github.com/no7here">
                     <img class="social-icon" src="/assets/icon/github.svg" alt="GitHub">
                     <span>GitHub</span>
                 </a>
-                <a class="social-link" href="">
+                <a class="social-link" href="https://guilded.gg/u/no7here">
                     <img class="social-icon" src="/assets/icon/guilded.svg" alt="Guilded">
                     <span>Guilded</span>
                 </a>
-                <a class="social-link" href="">
+                <a class="social-link" href="https://open.spotify.com/user/zp8o4bf6stiyic8w713dtxqe2">
                     <img class="social-icon" src="/assets/icon/spotify.svg" alt="Spotify">
                     <span>Spotify</span>
                 </a>
-                <a class="social-link" href="">
+                <a class="social-link" href="https://stats.fm/no7here">
                     <img class="social-icon" src="/assets/icon/statsfm.svg" alt="stats.fm">
                     <span>stats.fm</span>
                 </a>
-                <a class="social-link" href="">
+                <a class="social-link" href="https://steamcommunity.com/id/no7here">
                     <img class="social-icon" src="/assets/icon/steam.svg" alt="Steam">
                     <span>Steam</span>
                 </a>
@@ -109,15 +111,15 @@
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-title">
-                    <a href="/">not here</a>
-                    <p>© 2023 not here</p>
+                    <a href="/">no7here</a>
+                    <p>© 2023 no7here</p>
                 </div>
                 <div class="footer-music">
-                    <h1>Currently Playing</h1>
-                    <img src="https://i.scdn.co/image/ab67616d0000b2732846907b5152fb7dc38e450a" alt="">
+                    <h1 id="trackStatus"></h1>
+                    <img id="trackImg">
                     <div class="track-info">
-                        <h1>Death Of An Executioner</h1>
-                        <p>The Jaws Of Life • Pierce The Veil</p>
+                        <h1 id="trackName"></h1>
+                        <p id="trackInfo"></p>
                     </div>
                 </div>
             </div> 
